@@ -19,13 +19,19 @@
 // module.exports = db;
 const mysql = require("mysql2");
 
-const db = mysql.createConnection(process.env.MYSQL_URL);
+const db = mysql.createConnection({
+  host: process.env.MYSQLHOST || "localhost",
+  user: process.env.MYSQLUSER || "root",
+  password: process.env.MYSQLPASSWORD || "ayush06",
+  database: process.env.MYSQLDATABASE || "sharma_export_db",
+  port: process.env.MYSQLPORT || 3306
+});
 
 db.connect((err) => {
   if (err) {
     console.error("DB CONNECTION ERROR:", err);
   } else {
-    console.log("Connected to Railway DB");
+    console.log("Connected to DB");
   }
 });
 
