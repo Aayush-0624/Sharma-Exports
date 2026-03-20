@@ -24,9 +24,9 @@ function App() {
       <Navbar />
 
       <Routes>
-        <Route path="/" element={<Navigate to="/home" />} />
+        {/* <Route path="/" element={<Navigate to="/home" />} /> */}
         {/* Main Pages */}
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
@@ -43,6 +43,8 @@ function App() {
         <Route path="/login" element={<Login role="user" />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/admin-login" element={<Login role="admin" />} />
+
+        <Route path ="*" element={<Navigate to="/" />} />
 
         {/* Admin */}
         <Route
