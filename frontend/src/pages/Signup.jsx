@@ -100,14 +100,14 @@ export default function Signup() {
           className="w-full mb-6 p-3 bg-black rounded border border-gray-700"
         />
 
-        <select
+       {/*  <select
           name="role"
           onChange={handleChange}
           className="w-full mb-6 p-3 bg-black rounded border border-gray-700"
         >
           <option value="user">User</option>
           <option value="seller">Seller</option>
-        </select>
+        </select>*/} 
 
         <button className="w-full bg-green-500 hover:bg-green-600 py-3 rounded">
           Signup
