@@ -6,8 +6,8 @@ export default function Navbar() {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
 
-  const token = localStorage.getItem("token");
-  const user = JSON.parse(localStorage.getItem("user"));
+  // const token = localStorage.getItem("token");
+  // const user = JSON.parse(localStorage.getItem("user"));
 
   const handleLogout = () => {
     localStorage.removeItem("token");
@@ -48,7 +48,7 @@ export default function Navbar() {
         {/* Desktop Right */}
         <div className="hidden md:flex items-center gap-4">
 
-          {!token ? (
+          {/* {!token ? (
             <>
               <Link to="/login">
                 <button className="border px-4 py-2 rounded hover:bg-white hover:text-black transition">
@@ -84,7 +84,7 @@ export default function Navbar() {
                 Logout
               </button>
             </>
-          )}
+          )} */}
 
         </div>
 
@@ -123,7 +123,7 @@ export default function Navbar() {
 
           <div className="mt-6 border-t border-gray-700 pt-6">
 
-            {!token ? (
+            {/* {!token ? (
               <>
                 <Link to="/login" onClick={() => setOpen(false)}>
                   <button className="w-full border px-4 py-2 rounded mb-3">
@@ -162,7 +162,7 @@ export default function Navbar() {
                   Logout
                 </button>
               </>
-            )}
+            )} */}
 
           </div>
 

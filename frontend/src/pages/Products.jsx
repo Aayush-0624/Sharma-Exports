@@ -26,12 +26,8 @@ Product: ${product.name}`;
 
   // 🔥 HANDLE CLICK
   const handleClick = (product) => {
-    if (!token) {
-      setSelectedProduct(product);
-      setShowLogin(true);
-    } else {
-      openWhatsApp(product); // ✅ open WhatsApp instead of navigate
-    }
+    openWhatsApp(product); // ✅ open WhatsApp instead of navigate
+    
   };
 
   // ✅ ALL PRODUCTS DATA
@@ -149,13 +145,13 @@ Product: ${product.name}`;
         </div>
       </section>
 
-      {/* LOGIN POPUP */}
+       {/* LOGIN POPUP
       {showLogin && (
         <Login
           onClose={() => setShowLogin(false)}
           redirectPath={selectedProduct} 
         />
-      )}
+      )} */}
     </>
   );
 }
